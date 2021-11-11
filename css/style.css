@@ -1,4 +1,24 @@
-
+#graydisplay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%!important;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+#graydisplay img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 90%;
+  max-height: 90%;
+  height: 90%;
+}
 h2.name{
     font-weight: normal;
     font-size: 20px;
@@ -56,9 +76,6 @@ h3.title{
 	opacity: 0;/*透過0*/
 	background: #fff;
 	padding:50px 20px;
-  max-width: 1000px;
-  min-height: 600px;
-  margin: auto;
 }
 
 /*areaにis-activeというクラスがついた時の形状*/
@@ -78,105 +95,8 @@ h3.title{
 	}
 }
 
-/* --------------------------------------------------------------------------------
-Tabのレイアウト
--------------------------------------------------------------------------------- */
-/*tabの形状*/
-.tab{
-	display: flex;
-	flex-wrap: wrap;
-}
-.tab li a{
-	display: block;
-	background:#ddd;
-	margin:0 2px;
-	padding:10px 20px;
-}
-/*liにactiveクラスがついた時の形状*/
-.tab li.active a{
-	background:#fff;
-}
-
-
-/*エリアの表示非表示と形状*/
-.area {
-	display: none;/*はじめは非表示*/
-	opacity: 0;/*透過0*/
-	background: #fff;
-	padding:50px 20px;
-}
-
-/*areaにis-activeというクラスがついた時の形状*/
-.area.is-active {
-    display: block;/*表示*/
-    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes displayAnime{
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-
-
-/*========= レイアウトのためのCSS ===============*/
-
-body{
-	background:#eee;
-}
-
-ul{
-	list-style:none;
-}
-
-a{
-	color:#333;
-	text-decoration: none;
-}
-
-.wrapper{
-	width:100%;
-	max-width: 960px;
-	margin:30px auto;
-    background:#fefefe;
-}
-
-.area h2{
-	font-size:1.3rem;
-	margin:0 0 20px 10px;
-}
-
-.area li{
-	padding: 10px; 
-	border-bottom: 1px solid #ddd;
-}
-
-
-
-.thumb_list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -10px;
-}
-
-.thumb_list li {
+image {
   width: 25%;
   height: 120px;
   padding: 10px;
-}
-
-
-.thumb_list li img {
-  display: block;
-  border: 1px solid #ccc;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
 }
